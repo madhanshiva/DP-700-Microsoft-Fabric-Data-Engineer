@@ -26,14 +26,14 @@ In this task, you will create a Dataflow (Gen2) in Microsoft Fabric to ingest da
 
 1. Verify the **Data Flow Name (1)**  and click on **Create (2)**.
 
-   ![New dataflow.](./Images2/5t1-3.png)
+   ![New dataflow.](./Images2/dpl1-ex3-01.png)
 
 1. After a few seconds, the Power Query editor for your new dataflow opens as shown here. Select **Import from a Text/CSV file**.  
 
    ![New dataflow.](./Images/md45.png)
 
 1. Create a new data source with the following settings and then click on **Next (6)**:
-   -
+
    - **Link to file**: *Selected* (1)
    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv` (2)
    - **Connection**: Create new connection (3)
@@ -76,9 +76,9 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
    ![Data destination configuration page.](./Images2/5t2-2.png)
 
-3. In the list of available workspaces, expand your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** and select the **lakehouse (1)** you created in it at the start of this exercise. Then specify a new table named **orders (2)** and then select **Next (3)**.
+3. In the list of available workspaces, expand your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, select **dbo (2)** under **lakehouse** you created in it at the start of this exercise. Then specify a new table named **orders (3)** and then select **Next (4)**.
 
-   ![Data destination configuration page.](./Images/dpp53.png)
+   ![Data destination configuration page.](./Images2/dpl1-ex3-02.png)
 
 4. On the **Choose destination settings** page, disable the **Use automatic settings (1)** option, select **Append (2)** and then **Save settings (3)**.
 
@@ -90,9 +90,9 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
    ![Query with a lakehouse destination.](./Images/dpp55.png)
 
-6. Notice the **Lakehouse (1)** destination is indicated as an icon in the query in the Power Query editor. 
+6. Notice the **Lakehouse** destination is indicated as an icon in the query in the Power Query editor. 
 
-   ![Query with a lakehouse destination.](./Images/md54.png)
+   ![Query with a lakehouse destination.](./Images2/dpl1-ex3-03.png)
 
 7. Then wait for the **Dataflow 1** dataflow to be created in your workspace.
 
@@ -114,33 +114,31 @@ In this task, you will add your Dataflow (Gen2) as an activity within a pipeline
 
 1. The pipeline editor open up.      
 
-   ![Empty data pipeline.](./Images/md57.png)
-
    > **Tip**: If the Copy Data wizard opens automatically, close it!
 
-1. Select **Add pipeline activity (1)**, and add a **Dataflow (2)** activity to the pipeline.
+1. Select **Pipeline activity (1)**, and add a **Dataflow (2)** activity to the pipeline.
 
-   ![Empty data pipeline.](./Images/md58.png)
+   ![Empty data pipeline.](./Images2/dpl1-ex3-04.png)
 
 1. With the new **Dataflow1** activity selected, on the **Settings (1)** tab, in the **Dataflow** drop-down list, select **Dataflow 1 (2)** (the data flow you created previously)
 
    ![Pipeline with a dataflow activity.](./Images2/5t3-6.png)
 
-1. On the **Home** tab, save the pipeline using the **&#128427;** (*Save*) icon.
+1. On the **Home** tab, save the pipeline using the **&#128427;** (*Save*) **(1)** icon.
 
-1. Use the **&#9655; Run** button to run the pipeline.
+1. Use the **&#9655; Run (2)** button to run the pipeline.
 
-   ![Pipeline with a dataflow activity.](./Images/dpp56.png)
+   ![Pipeline with a dataflow activity.](./Images2/dpl1-ex3-05.png)
 
 1. Wait for it to complete. It may take a few minutes.
    
-   ![Pipeline with a dataflow activity.](./Images2/5t3-9.png)   
+   ![Pipeline with a dataflow activity.](./Images2/dpl1-ex3-06.png)   
 
 1. In the menu bar on the left edge, select your lakehouse.
 
 1. In the **...** menu for **Tables**, select **refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 
-   ![Table loaded by a dataflow.](./Images2/5t3-11.png)
+   ![Table loaded by a dataflow.](./Images2/dpl1-07-34.png)
 
 > **Tip**: In Power BI Desktop, you can connect directly to the data transformations done with your dataflow by using the *Power BI dataflows (Legacy)* connector.
 > **Note**: You can also make additional transformations, publish as a new dataset, and distribute with intended audience for specialized datasets.
