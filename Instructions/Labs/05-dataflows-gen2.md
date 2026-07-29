@@ -84,7 +84,7 @@ In this task, you will configure the destination for your Dataflow (Gen2) so the
 
    >**Note:** We suggest using the *Power query* editor for updating data types, but you can also do so from this page, if you prefer.
 
-    ![Data destination settings page.](./Images2/5t2-4.png)
+    ![Data destination settings page.](./Images2/dpl1-ex3-07.png)
 
 5. On the Menu bar, open **View (1)** and select **Diagram view (2)**.
 
