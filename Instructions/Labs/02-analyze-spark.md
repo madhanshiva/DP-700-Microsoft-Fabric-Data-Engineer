@@ -27,13 +27,11 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
    ![Screenshot of uploaded files in a lakehouse.](./Images2/t1-2.png)  
 
-1. Provide the following details to create a **Lakehouse**, deselect **Lakehouse schemas (2)**  and then click on **Create (3)** to proceed.
+1. Provide the following details to create a **Lakehouse**, leave the Lakehouse schemas checkbox selected and then click on **Create (2)** to proceed.
 
    - **Name:** Enter **lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)**  
 
-     ![Screenshot of uploaded files in a lakehouse.](./Images/dp700-lab1-01.png)
-
-    > **Important:** Make sure the **Lakehouse schemas** option is disabled because you can't change this setting after creating the lakehouse. You will need to create a new lakehouse if this step is missed. 
+     ![Screenshot of uploaded files in a lakehouse.](./Images/dpl1-07-02.png)
 
 1. Once inside the **Lakehouse**, navigate to the **Files** folder in the **Explorer** pane. Click the **ellipses (1)** menu, select **Upload (2)**, and then choose **Upload folder (3)**.  
 
@@ -75,13 +73,15 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
    ![Enter Your Username](./Images/pd3.png)
 
+   > **Note:** If the **Notebook Copilot Updates and Git Integration** dialog appears, select **Skip for now** to continue.
+
 1. Select the first cell (which is currently a code cell), and then in the top-right tool bar, use the **M↓** button to convert it to a markdown cell. The text contained in the cell will then be displayed as formatted text.
 
-   ![Enter Your Username](./Images/md14.png)
+   ![Enter Your Username](./Images/dpl1-07-03.png)
 
 1. Use the 🖉 (Edit) button to switch the cell to editing mode.   
 
-   ![Enter Your Username](./Images/md15.png)
+   ![Enter Your Username](./Images/dpl1-07-04.png)
 
 1. Then modify the markdown as shown below.
 
@@ -98,28 +98,15 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 In this task, you will create a DataFrame using PySpark to begin working with your uploaded data. DataFrames are a fundamental data structure in Spark, allowing you to efficiently load, process, and analyze large datasets in a distributed environment.
 
->**NOTE** : Fabric notebooks support multiple programming languages including Scala, R, and Spark SQL.
+>**NOTE:** Fabric notebooks support multiple programming languages including Scala, R, and Spark SQL.
 
+1. In the **Explorer** pane, select **Add data items (1)**, and then select **From OneLake catalog (2)**.
 
-1. Select your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** from the left bar and then click **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** again.
+   ![Enter Your Username](./Images/dpl1-07-05.png)
 
-   ![Enter Your Username](./Images/pd2.png)
+1. Select **Lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** and then click on **Add (2)**.
 
-1. You will see a list of items contained in the workspace including your lakehouse and notebook.
-
-   ![Enter Your Username](./Images/dp700-lab1-02.png)
-
-1. Select the lakehouse to display the Explorer pane.
-
-   ![Enter Your Username](./Images/dpp11.png)
-
-1. Including the **orders (1)** folder. From the top menu, select **Open notebook (2)**, **Existing notebook (3)**, and then open the notebook you created earlier. The notebook should now be open next to the Explorer pane. Expand Lakehouses, expand the Files list, and select the orders folder. The CSV files that you uploaded are listed next to the notebook editor, like this:
-
-   ![Enter Your Username](./Images/md18.png)
-
-1. Select **Notebook<inject key="DeploymentID" enableCopy="false"/> (1)** and then click on **Open (2)**.
-
-   ![Enter Your Username](./Images/dpp12.png)
+   ![Enter Your Username](./Images/dpl1-07-06.png)
 
 1. To load the dataset, first expand your **Lakehouse (1)**, then expand the **Files (2)** section and navigate to the **Orders (3)** folder. Locate the 2019.csv file, click the ellipsis **(⋯) (4)** next to it, and select **Load data (5)** > **Spark (6)** from the menu. This action will automatically open a new notebook with a pre-generated Spark code cell to load the data.
 
@@ -408,9 +395,9 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
 1. Run the code cell and review the output, which describes the definition of the new table.
 
-1. In the **Lakehouses** pane, in the … menu for the Tables folder, select **Refresh**. Then expand the **Tables** node and verify that the **salesorders** table has been created.
+1. In the **Lakehouses** pane, in the … menu for the Tables folder, select **Refresh (1)**. Then expand the **Tables** node and verify that the **salesorders (2)** table has been created.
 
-    ![Screen picture showing that the salesorders table has been created.](./Images/dp700-lab1-05.png)
+    ![Screen picture showing that the salesorders table has been created.](./Images/dpl1-07-07.png)
 
 1. In the **… (1)** menu for the **salesorders** table, select **Load data (2)** > **Spark (3)**.
 
